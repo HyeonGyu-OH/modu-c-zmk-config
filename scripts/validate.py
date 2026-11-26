@@ -253,13 +253,13 @@ def check_build_files() -> None:
         except ValueError as exc:
             fail(f"invalid cmake-args quoting for {entry['shield']}: {exc}")
         central = entry["shield"] == "modu_left"
-        expected_args = [expected_cmake] + (["-DCONFIG_ZMK_STUDIO=y"] if central else [])
+        expected_args = [expected_cmake]
         if parsed != expected_args:
             fail(
                 f"cmake-args for {entry['shield']} must preserve the quoted module list "
                 "and enable Studio only on the central"
             )
-        expected_snippet = "studio-rpc-usb-uart" if central else None
+        expected_snippet = None
         if entry.get("snippet") != expected_snippet:
             fail("studio-rpc-usb-uart must be enabled only for modu_left")
 
