@@ -61,10 +61,10 @@
 
         layer_2 {
             // Hold layer 1, then the left Ctrl position (&mo 2).
-            // R: Studio unlock; T: USB output. Existing 5/6 bootloader keys remain.
+            // T: USB output. (Studio disabled for KVM compatibility) Existing 5/6 bootloader keys remain.
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &bootloader  &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &studio_unlock  &out OUT_USB  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &out OUT_USB  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans       &trans  &trans  &trans  &trans  &trans
